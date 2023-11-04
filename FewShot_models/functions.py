@@ -299,8 +299,8 @@ def post_config(opt, input_dir=None):
     use_cuda = torch.cuda.is_available()
     if use_cuda:
         if torch.cuda.device_count() > 1:
-            print("GPUs available:", torch.cuda.device_count(), "but will use only 1 GPUs!")
-            gpu_ids = [0]
+            print("GPUs available:", torch.cuda.device_count(), "GPUs")
+            gpu_ids = [0, 1]
             opt.device_ids = gpu_ids
 
 
