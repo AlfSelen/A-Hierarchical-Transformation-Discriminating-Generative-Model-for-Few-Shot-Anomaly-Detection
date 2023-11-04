@@ -30,8 +30,7 @@ def anomaly_detection(input_name_model,test_size, opt):
 
     else:
         if os.path.exists(path) == False:
-            print("path not exists")
-            exit()
+            raise FileExistsError("path not exists anomaly detection")
 
     xTest_input = xTest_input[:test_size]
     yTest_input = yTest_input[:test_size]

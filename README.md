@@ -26,6 +26,10 @@ To train the model on mvtec/paris/cifar/mnist/fashionMnist:
 
 ```
 python main_train.py  --num_images <num_training_images>  --pos_class <normal_class_in_dataset> --index_download <index_of_training_image> --dataset <name_of_dataset>
+python main_train.py --num_images 1 
+python main_train.py --dataset paris --pos_class eiffel_1 --niter_rgb 10 --niter_gray 10 --test_size 50 --size_image 450
+python main_train.py --pos_class dog --niter_rgb 10 --niter_gray 10 --test_size 50 --size_image 450
+
 ```
 
 Common training options:

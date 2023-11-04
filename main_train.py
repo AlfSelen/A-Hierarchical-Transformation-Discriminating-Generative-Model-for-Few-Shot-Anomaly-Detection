@@ -64,6 +64,7 @@ if __name__ == '__main__':
     Zs,NoiseAmp = {}, {}
     reals_list = torch.FloatTensor(num_images,1,int(opt.nc_im), int(opt.size_image), int(opt.size_image)).cuda()
 
+
     for i in range(num_images):
         real = img.imread("%s/%s_%d.png" % (opt.input_dir, opt.input_name[:-4], i))
         if dataset == 'mnist' or dataset == 'fashionmnist':

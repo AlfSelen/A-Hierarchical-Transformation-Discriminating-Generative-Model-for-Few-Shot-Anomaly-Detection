@@ -1,0 +1,10 @@
+*.jpg
+*.png
+TrainedModels/
+Paris/
+paris_*/
+cifar_test*
+cifar_train*
+cifar_data*
+Folder/
+__pycache__/

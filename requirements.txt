@@ -9,4 +9,3 @@ tqdm
 opencv-python
 Pillow
 kornia
-itertools
