@@ -45,7 +45,7 @@ class WDiscriminator(nn.Module):
         x = self.head(x)
         x = self.body(x)
         x = self.tail(x)
-        return x.unsqueeze(0)
+        return x
 
 class WDiscriminatorMulti(nn.Module):
     def __init__(self, opt):
@@ -69,7 +69,7 @@ class WDiscriminatorMulti(nn.Module):
         x = self.body(x)
         x = self.tail(x)
         # print("in model: ", x.shape)
-        return x.unsqueeze(0)
+        return x
 
 class GeneratorConcatSkip2CleanAdd(nn.Module):
     def __init__(self, opt):

@@ -8,3 +8,4 @@ cifar_train*
 cifar_data*
 Folder/
 __pycache__/
+.idea/
