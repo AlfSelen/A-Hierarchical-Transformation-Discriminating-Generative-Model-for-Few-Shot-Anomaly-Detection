@@ -90,7 +90,7 @@ def download_class_paris(opt):
     paris_testset = torchvision.datasets.ImageFolder(root='Paris/jpg',
                                                          transform=transform)
     paris_loader = torch.utils.data.DataLoader(dataset=paris_testset,
-                                             batch_size=len(paris_testset),
+                                             batch_size=128,
                                              shuffle=False)
     (paris_data, i) = next(iter(paris_loader))
     paris_data = paris_data.numpy()

@@ -9,3 +9,5 @@ cifar_data*
 Folder/
 __pycache__/
 .idea/
+*_train_numImages*.txt
+mnist_data/MNIST/
