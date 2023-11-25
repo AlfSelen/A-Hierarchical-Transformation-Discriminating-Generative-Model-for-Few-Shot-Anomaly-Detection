@@ -11,3 +11,4 @@ __pycache__/
 .idea/
 *_train_numImages*.txt
 mnist_data/MNIST/
+run.ipynb
