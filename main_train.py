@@ -10,6 +10,9 @@ from Dataloaders.mvtec_loader import download_class_mvtec
 from anomaly_detection_evaluation import anomaly_detection
 from defect_detection_evaluation import defect_detection
 import time
+from os import environ
+
+
 
 if __name__ == '__main__':
     startTime = time.time()
@@ -54,6 +57,7 @@ if __name__ == '__main__':
             opt.num_transforms, opt.niter = 42, opt.niter_gray
             opt.input_name = download_class_FashionMnist(opt)
         elif dataset == 'paris':
+            opt.size_image = 450
             opt.num_transforms, opt.niter = 54, opt.niter_rgb
             opt.input_name = download_class_paris(opt)
         elif dataset == 'mvtec':
