@@ -9,8 +9,10 @@ from Dataloaders.paris_loader import download_class_paris
 from Dataloaders.mvtec_loader import download_class_mvtec
 from anomaly_detection_evaluation import anomaly_detection
 from defect_detection_evaluation import defect_detection
+import time
 
 if __name__ == '__main__':
+    startTime = time.time()
     parser = get_arguments()
     parser.add_argument('--dataset', help='cifar/mnist/fashionmnist/mvtec/paris', default='cifar')
     parser.add_argument('--input_dir', help='input image dir', default='Input/Images')
@@ -83,3 +85,6 @@ if __name__ == '__main__':
         defect_detection(opt.input_name, opt.test_size, opt)
     else:
         anomaly_detection(opt.input_name, opt.test_size, opt)
+
+    executionTime = (time.time() - startTime)
+    print('Execution time in seconds: ' + str(executionTime))
